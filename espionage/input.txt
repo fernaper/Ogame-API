@@ -14,4 +14,3 @@ Mina de metal 23Mina de cristal 23Sintetizador de deuterio 23Planta de energía 
 Investigación
 Tecnología de espionaje 8Tecnología de computación 12Tecnología militar 12Tecnología de defensa 12Tecnología de blindaje 11Tecnología de energía 12Tecnología de hiperespacio 9Motor de combustión 12Motor de impulso 9Propulsor hiperespacial 7Tecnología láser 14Tecnología iónica 9Tecnología de plasma 9Red de investigación 2Astrofísica 7
 Comentarios
-Enviar
