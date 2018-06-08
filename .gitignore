@@ -103,4 +103,4 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-espionage/my_spy/
+espionage/my_spy/*
