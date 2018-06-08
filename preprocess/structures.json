@@ -1,0 +1,71 @@
+{
+    "es": {
+        "buildings": {
+            "metal_mine": "Mina de metal",
+            "crystal_mine": "Mina de cristal",
+            "deuterium_synthesizer": "Sintetizador de deuterio",
+            "solar_plant":"Planta de energía solar",
+            "fusion_reactor":"Planta de fusión",
+            "metal_tank":"Almacén de metal",
+            "crystal_tank":"Almacén de cristal",
+            "deuterium_tank":"Contenedor de deuterio",
+            "alliance_depot":"Depósito de la alianza",
+            "jump_gate":"Salto cuántico",
+            "lunar_base":"Base lunar",
+            "missile_silo":"Silo",
+            "nanite_factory":"Fábrica de Nanobots",
+            "research_lab":"Laboratorio de investigación",
+            "robotics_factory":"Fábrica de Robots",
+            "sensor_phalanx":"Sensor Phalanx",
+            "hangar":"Hangar",
+            "terraformer":"Terraformer",
+            "orbital_shipyard":"Astillero Orbital"
+        },
+        "research": {
+            "spionage_technology":"Tecnología de espionaje",
+            "computer_technology":"Tecnología de computación",
+            "weapon_technology":"Tecnología militar",
+            "shielding_technology":"Tecnología de defensa",
+            "armour_technology":"Tecnología de blindaje",
+            "energy_technology":"Tecnología de energía",
+            "hyperspace_technology":"Tecnología de hiperespacio",
+            "combustion_drive":"Motor de combustión",
+            "impulse_drive":"Motor de impulso",
+            "hyperspace_drive":"Propulsor hiperespacial",
+            "laser_technology":"Tecnología láser",
+            "ion_technology":"Tecnología iónica",
+            "plasma_technology":"Tecnología de plasma",
+            "intergalactic_network":"Red de investigación intergaláctica",
+            "astrophysics":"Astrofísica",
+            "graviton_technology":"Tecnología de gravitón"
+        },
+        "ships": {
+            "light_fighter":"Cazador ligero",
+            "heavy_fighter":"Cazador pesado",
+            "cruiser":"Crucero",
+            "battleship":"Nave de batalla",
+            "battlecruiser":"Acorazado",
+            "bomber":"Bombardero",
+            "destroyer":"Destructor",
+            "deathstar":"Estrella de la muerte",
+            "small_cargo_ship":"Nave pequeña de carga",
+            "large_cargo_ship":"Nave grande de carga",
+            "colony_ship":"Colonizador",
+            "recycler":"Reciclador",
+            "espionage_probe":"Sonda de espionaje",
+            "solar_satellite":"Satélite solar"
+        },
+        "defense": {
+            "rocket_launcher":"Lanzamisiles",
+            "light_laser":"Láser pequeño",
+            "heavy_laser":"Láser grande",
+            "gauss_cannon":"Cañón Gauss",
+            "ion_cannon":"Cañón iónico",
+            "plasma_turret":"Cañón de plasma",
+            "small_shield_dome":"Cúpula pequeña de protección",
+            "large_shield_dome":"Cúpula grande de protección",
+            "antiballistic_missile":"Misiles antibalísticos",
+            "interplanetary_missile":"Misil interplanetario"
+        }
+    }
+}
