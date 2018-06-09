@@ -4,13 +4,17 @@ def read_espionage(espionage, structures):
     
     espionage = espionage.split('\n')
     line = espionage[0].split(' ')
-    ans.update({'planet':line[4]})
-    ans.update({'coordinates':line[5]})
-    ans.update({'date':'{} {}'.format(line[6], line[7])})
+    
+    j = 4
+    while line[j][0] != '[':
+        j += 1
+    ans.update({'planet':' '.join(line[4:j])})
+    ans.update({'coordinates':line[j]})
+    ans.update({'date':'{} {}'.format(line[j+1], line[j+2])})
     
     i = 2
     name = ' '.join(espionage[i].split(' ')[1:])[1:]
-    pos = name.find('(i')
+    pos = name.find('(')    
     
     if pos != -1:
         name = name[:pos]

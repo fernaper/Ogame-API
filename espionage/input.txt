@@ -1,16 +1,15 @@
-Informe de espionaje en Francisca [6:457:6] 08.06.2018 12:09:08
+Informe de espionaje en Koprulu [6:456:8] 08.06.2018 12:09:28
 De: Ordenes de la flota
-Jugadores  Senator Aries
+Jugadores  Rapero Furioso
 Posibilidades de contra-espionaje: 0 %
-Tu sonda escaner no muestra anormalidades en la atmósfera del planeta. Parece que no hubo actividad en el planeta dentro de la última hora.
+Tu espionaje muestra anormalidades en la atmósfera del planeta lo que señala una actividad en los últimos 15 minutos.
 Recursos
-1,552M 1,408M 420.330 10.149
+407.917 539.762 227.057 3.108
 Flotas
-Nave grande de carga 105Reciclador 6Satélite solar 25
 Defensa
-Lanzamisiles 1.148Láser pequeño 573Láser grande 313Cañón Gauss 166Cañón iónico 681Cañón de plasma 72Cúpula pequeña de protección 1Cúpula grande de protección 1Misiles antibalísticos 20
 Edificio
-Mina de metal 23Mina de cristal 23Sintetizador de deuterio 23Planta de energía solar 26Planta de fusión 13Fábrica de Robots 12Fábrica de Nanobots 1Hangar 12Almacén de metal 9Almacén de cristal 9Contenedor de deuterio 8Laboratorio de investigación 9Terraformer 1Depósito de la alianza 2Astillero Orbital 4Silo 4
+Mina de metal 18Mina de cristal 23Sintetizador de deuterio 21Planta de energía solar 21Fábrica de Robots 2Hangar 6Almacén de metal 8Almacén de cristal 8Contenedor de deuterio 6Laboratorio de investigación 7Astillero Orbital 2
 Investigación
-Tecnología de espionaje 8Tecnología de computación 12Tecnología militar 12Tecnología de defensa 12Tecnología de blindaje 11Tecnología de energía 12Tecnología de hiperespacio 9Motor de combustión 12Motor de impulso 9Propulsor hiperespacial 7Tecnología láser 14Tecnología iónica 9Tecnología de plasma 9Red de investigación 2Astrofísica 7
+No hemos podido encontrar datos fiables de este tipo al escanear.
+
 Comentarios
