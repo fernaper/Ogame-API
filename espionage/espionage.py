@@ -1,3 +1,4 @@
+# Allows us to read a espionage
 def read_espionage(espionage, structures):
     ans = {}
     carefull = False
