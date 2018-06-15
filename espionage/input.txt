@@ -1,4 +1,4 @@
-Informe de espionaje en Koprulu [6:456:8] 08.06.2018 12:09:28
+﻿Informe de espionaje en Koprulu [6:456:8] 08.06.2018 12:09:28
 De: Ordenes de la flota
 Jugadores  Rapero Furioso
 Posibilidades de contra-espionaje: 0 %
@@ -12,4 +12,4 @@ Mina de metal 18Mina de cristal 23Sintetizador de deuterio 21Planta de energía 
 Investigación
 No hemos podido encontrar datos fiables de este tipo al escanear.
 
-Comentarios
+Comentarios 
