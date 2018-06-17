@@ -1,7 +1,7 @@
 def distance(origin, destination, defense):    
     origin=[int(c) for c in origin[1:-1].split(':')]
     destination=[int(c) for c in destination[1:-1].split(':')]
-    distance=float('inf')
+    distance=100000
     
     if defense:
         distance = abs(origin[0]-destination[0])*10000
@@ -10,16 +10,42 @@ def distance(origin, destination, defense):
         
     return distance
 
-def resources(ratio, resource,defense):
+def resources(ratio, resource, defense):
     metal=int(resource['metal'].replace('.',''))
     crystal=int(resource['crystal'].replace('.',''))
     deuteryum=int(resource['deuteryum'].replace('.',''))
-    all_resources=0
+    all_resources=1
     
     if defense:
-        all_resources += metal*ratio[0] + crystal*ratio[1] + deuteryum*ratio[2]
+        all_resources = metal*ratio[0] + crystal*ratio[1] + deuteryum*ratio[2]
     
     return all_resources
+
+def generic(origin, destination, ratio, resource, defense):
+    # Numbers between 0 and 1
+    cost = distance(origin,destination,defense)/100000.0
+    cost += 1 - (1.0/resources(ratio,resource,defense))
+    return cost/2.0
+
+def new_date(old_date, new_date):
+    old_date = old_date.split(' ')
+    new_date = new_date.split(' ')
+    
+    old_day = old_date[0].split('.')
+    new_day = new_date[0].split('.')
+    
+    for i in range(2,-1,-1):
+        if int(old_day[i]) <= int(new_day[i]):
+            return int(old_day[i]) < int(new_day[i])
+    
+    old_hour = old_date[1].split(':')
+    new_hour = old_date[1].split(':')
+    
+    for i in range(3):
+        if int(old_hour[i]) <= int(new_hour[i]):
+            return int(old_hour[i]) < int(new_hour[i])
+    
+    return False
 
 class Ranking:
     # Defense True means that I do not care if a planet have defense
@@ -32,6 +58,11 @@ class Ranking:
     
     # Espionage is a dict
     def add_espionage(self, espionage):
+        for i in range(len(self.my_espionages)):
+            if espionage['name'] == self.my_espionages[i]['name'] and espionage['planet'] == self.my_espionages[i]['planet'] and new_date(espionage['date'], self.my_espionages[i]['date']):
+                self.my_espionages[i] = espionage
+                return
+            
         self.my_espionages.append(espionage)
         
     def clear_espionages(self):
@@ -43,6 +74,9 @@ class Ranking:
     
     def ranking_resources(self):
         return sorted(self.my_espionages, key=lambda espionage: (resources(self.ratio,espionage['resources'],espionage['care']!=True or self.defense != False), resources(self.ratio, espionage['resources'], True)), reverse=True)
+    
+    def ranking_generic(self):
+        return sorted(self.my_espionages, key=lambda espionage: (generic(self.coordinates, espionage['coordinates'], self.ratio, espionage['resources'], espionage['care']!=True or self.defense != False), generic(self.coordinates, espionage['coordinates'], self.ratio, espionage['resources'], True)), reverse=True)
     
     def get_all(self):
         return self.my_espionages
