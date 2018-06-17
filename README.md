@@ -7,7 +7,7 @@ Backend:
  - It can be launched as a server with the **server.py** file.
 
 Frontend:
- - In the GUI folder you can access the web page main.html, which connects to the backend
+ - In the GUI folder you can access the web page **main.html**, which connects to the backend
  
 ## CONCEPTUAL IDEA
 
