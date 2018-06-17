@@ -31,19 +31,23 @@ def new_date(old_date, new_date):
     old_date = old_date.split(' ')
     new_date = new_date.split(' ')
     
-    old_day = old_date[0].split('.')
-    new_day = new_date[0].split('.')
+    old_day = list(map(int,old_date[0].split('.')))
+    new_day = list(map(int,new_date[0].split('.')))
     
     for i in range(2,-1,-1):
-        if int(old_day[i]) <= int(new_day[i]):
-            return int(old_day[i]) < int(new_day[i])
+        if old_day[i] < new_day[i]:
+            return True
+        elif old_day[i] > new_day[i]:
+            return False
     
     old_hour = old_date[1].split(':')
-    new_hour = old_date[1].split(':')
+    new_hour = new_date[1].split(':')
     
     for i in range(3):
-        if int(old_hour[i]) <= int(new_hour[i]):
-            return int(old_hour[i]) < int(new_hour[i])
+        if old_hour[i] < new_hour[i]:
+            return True
+        elif old_hour[i] > new_hour[i]:
+            return False
     
     return False
 
@@ -59,8 +63,9 @@ class Ranking:
     # Espionage is a dict
     def add_espionage(self, espionage):
         for i in range(len(self.my_espionages)):
-            if espionage['name'] == self.my_espionages[i]['name'] and espionage['planet'] == self.my_espionages[i]['planet'] and new_date(espionage['date'], self.my_espionages[i]['date']):
-                self.my_espionages[i] = espionage
+            if espionage['coordinates'] == self.my_espionages[i]['coordinates']:
+                if new_date(self.my_espionages[i]['date'], espionage['date']):
+                    self.my_espionages[i] = espionage
                 return
             
         self.my_espionages.append(espionage)
