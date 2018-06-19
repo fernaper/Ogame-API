@@ -1,16 +1,25 @@
+@font-face {
+  font-family: FastForward;
+  src: url(fonts/FastForward.ttf);
+}
+
 *{
 	margin: 0px;
 	padding: 0px;
 }
 
 body{
-	background-image: url(img/bg.gif);
+  background: #000 url(img/background.jpg) no-repeat 0 0;
 }
 
 h1{
 	color: #fff;
+  margin: 10px 0 10px 0;
 	text-align: center;
-	margin: 10px 0 10px 0;
+  text-transform: uppercase;
+  font-family: FastForward;
+  font-size: 90px;
+  letter-spacing: 2px;
 }
 
 #contenedor{
@@ -19,37 +28,41 @@ h1{
 }
 
 textarea{
-	width: 100%;
+	width: 882px;
 	height: 150px;
-    background-color: #b3c3cb;
-    border: 1px solid #668599;
-    border-bottom-color: #d3d9de;
-    border-radius: 3px;
-    box-shadow: inset 0 1px 3px 0 #454f54;
-    color: #000;
-    font-size: 12px;
-    padding: 5px;
-    resize: none;
-    outline: none;
+  background-color: #b3c3cb;
+  border: 1px solid #668599;
+  border-bottom-color: #d3d9de;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 3px 0 #454f54;
+  color: #000;
+  font-size: 12px;
+  padding: 8px;
+  resize: none;
+  outline: none;
 }
 
-.wrapper{
-	display: inline-block;
-	background: url("img/button_bg.gif") no-repeat;
-	background-size: 100%;
-	width: 300px;
-}
-
-.button {
-  background: transparent;
+input[type=submit] {
+  background: url("img/02_button.png") no-repeat;
+  background-size: 100%;
+  border-radius: 5px;
+  display: table-cell;
+  vertical-align: center;
+  float: right;
+  width: 125px;
   border: none;
-  color: #6f9fc8;
-  font-size: 15px;
+  color: #fff;
+  font-size: 16px;
   font-weight: 700;
-  padding-top: 13px;
-  padding-bottom: 10px;
-  width: 300px;
+  padding: 12px 0;
   text-align: center;
   outline: none;
   cursor: pointer;
+  box-shadow: inset 0 1px 3px 0 #454f54;
+}
+
+input[type=submit]:hover{
+  background: url("img/02_button_hover.png") no-repeat;
+  background-size: 100%;
+  border-radius: 5px;
 }

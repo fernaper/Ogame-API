@@ -5,18 +5,13 @@
 	<title></title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 	<div id="contenedor">
 		<h1>Eternity</h1>
-		<!-- SCRIPT IS IN FILE "form.js" -->
-		<script src="form.js"></script>
 		<form action="http://localhost:8080/ogame/espionage" method="post" name="informe">
-			<textarea name="textarea" id="espionage_textarea" placeholder="Copia y pega el informe de espionaje aqui"></textarea>
-			<div class="wrapper">
-				<input type="submit" value="Enviar" class="button" id="espionage">
-			</div>
+			<textarea id="dataToSend" name="espionage" placeholder="Copia y pega el informe de espionaje aqui"></textarea>
+			<input type="submit" value="Enviar" id="espionage">
 		</form>
 	</div>
 </body>
