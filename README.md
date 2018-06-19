@@ -18,7 +18,7 @@ This OGame API allows you to retrieve all the information from Ogame's espionage
 ### Fernando Pérez Gutiérrez
 Conceptual designer, project manager and backend programmer.
 
-### SergiPerello
+### Sergi Perelló Campmany
 Frontend programmer, tester and ideas provider.
 
 ## COPYRIGHT ©
