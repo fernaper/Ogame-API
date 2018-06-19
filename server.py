@@ -21,6 +21,7 @@ Options:
 '''
 from preprocess import preparation
 from espionage import espionage as spy
+from espionage import ranking
 from mydata import base
 import io
 import os.path
@@ -40,6 +41,27 @@ def espionage():
         my_spy.write(dump)
     
     return analysis
+
+@post('/ogame/ranking/<rank>')
+def ranking(rank='generic'):
+    data = request.json.get('data')
+    defense = request.json.get('defense')
+    config = preparation.load_config()
+    structures = preparation.load_structures(lang=config['language'])
+    r = ranking.Ranking(defense=defense)
+    
+    for espionage in data:
+        analysis = spy.read_espionage(espionage,structures)
+        r.add_espionage(analysis)
+        
+    if rank=='generic':
+        return r.ranking_generic()
+    elif rank=='clossnes':
+        return r.ranking_clossnes()
+    elif rank=='resources':
+        return r.ranking_resources()
+    else:
+        return r.get_all()
 
 if __name__ == "__main__":
     arguments = docopt(__doc__)
