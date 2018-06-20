@@ -5,52 +5,13 @@
 	<title></title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 	<div id="contenedor">
 		<h1>Eternity</h1>
-		<form method="post" name="informe">
-			<textarea id="espionage_textarea" placeholder="Copia y pega el informe de espionaje aqui"></textarea>
-			<div class="wrapper">
-				<input type="submit" value="Enviar" class="button" id="espionage">
-			</div>
-			<script>
-            /*
-                TODO:
-                    Revisar este link: https://www.html5rocks.com/en/tutorials/cors/
-                    En él se habla sobre como ser capaz de que los permisos de seguridad nos permitan 
-                    enviar el mensaje al servidor.
-                    Esto es necesario, porque hasta el momento, aunque en la variable dataToBeSent no
-                    se encuentra el texto que debería he probado a establecer la conexión con el servidor
-                    y me da información de que no tiene permisos para establecerla.
-                    Investigando pone que es porque los navegadores por motivos de seguridad deniegan esos
-                    permisos y hay que hacerlo de una forma concreta, tal y como se explica en el link de 
-                    arriba.
-                    
-                    Trata de readaptarlo usando lo mencionado en ese link.
-            */
-			$('document').ready(function() {
-			    $('input[type=submit]').click(function(a) {
-			        url = 'http://localhost:8080/ogame/espionage';
-			        // TODO: Hacer que sea capaz de coger el texto (el alert lo hace pero sin hacer nada
-                    var dataToBeSent = $("#espionage_textarea").html();
-			        alert(dataToBeSent);
-			        $.ajax({
-			            url : url,
-			            data : dataToBeSent,
-			            success : function(response) {
-			                alert('Success');
-			            },
-			            error : function(request, textStatus, errorThrown) {
-			                alert('Something bad happened');
-			            }
-			        });
-			        a.preventDefault();
-			    });
-            });
-			</script>
-
+		<form action="http://localhost:8080/ogame/espionage" method="post" name="informe">
+			<!-- Provando value="algo" --><input type="text" id="dataToSend" name="dataToSend" placeholder="Copia y pega el informe de espionaje aqui" value="MINADEMETAL 18">
+			<button>Enviar</button>
 		</form>
 	</div>
 </body>
