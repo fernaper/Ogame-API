@@ -27,9 +27,9 @@ h1{
 	width: 900px;
 }
 
-textarea{
+input[type=text]{
 	width: 882px;
-	height: 150px;
+	height: 30px;
   background-color: #b3c3cb;
   border: 1px solid #668599;
   border-bottom-color: #d3d9de;
@@ -42,7 +42,7 @@ textarea{
   outline: none;
 }
 
-input[type=submit] {
+button {
   background: url("img/02_button.png") no-repeat;
   background-size: 100%;
   border-radius: 5px;
@@ -61,7 +61,7 @@ input[type=submit] {
   box-shadow: inset 0 1px 3px 0 #454f54;
 }
 
-input[type=submit]:hover{
+button:hover{
   background: url("img/02_button_hover.png") no-repeat;
   background-size: 100%;
   border-radius: 5px;
